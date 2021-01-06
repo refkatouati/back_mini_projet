@@ -37,6 +37,18 @@ public class Rest {
 	public List<Pfe> meth3(@PathVariable("id") int id){
 		return daopfe.getAllPfeByTypePfe(id);
 		}
+	@GetMapping("/chercher/{titre}")
+	public List<Pfe> meth4(@PathVariable("titre") String titre){
+		return daopfe.getAllPfeByTitre(titre);
+		}
+	@GetMapping("/count")
+	public Integer meth5(){
+		return daopfe.findAll().size();
+		}
+	@GetMapping("/count2/{id}")
+	public Integer meth6(@PathVariable("id") int id){
+		return daopfe.getAllPfeByTypePfe(id).size();
+		}
 	
 	
 	@GetMapping("/listetype")

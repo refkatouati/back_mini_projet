@@ -17,7 +17,7 @@ public class Pfe {
 	
 	@ManyToOne
 	@JoinColumn(name = "typepfe_id")
-	TypePfes type;
+	private TypePfes type;
 
 	public Pfe() {
 	}
